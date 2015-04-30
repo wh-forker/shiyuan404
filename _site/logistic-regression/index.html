@@ -1,0 +1,258 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>逻辑回归模型 &#8211; Shiyuan's blog</title>
+<meta name="description" content="Loser">
+<meta name="keywords" content="learning">
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="逻辑回归模型">
+<meta property="og:description" content="Loser">
+<meta property="og:url" content="/logistic-regression/">
+<meta property="og:site_name" content="Shiyuan's blog">
+
+
+
+<link rel="canonical" href="/logistic-regression/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Shiyuan's blog Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.min.css">
+<!-- Webfonts -->
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+		<li><a href="/">Home</a></li>
+		<li>
+			<a href="#">About</a>
+			<ul class="dl-submenu">
+				<li>
+					<img src="/images/avatar.jpg" alt="Shi Yuan photo" class="author-photo">
+					<h4>Shi Yuan</h4>
+					<p>Trapped in the past, I just can't seem to move on</p>
+				</li>
+				<li><a href="/about/">Learn More</a></li>
+				<li>
+					<a href="mailto:shiyuan404@hotmail.com"><i class="fa fa-envelope"></i> Email</a>
+				</li>
+				
+				<li>
+					<a href="http://facebook.com/yuan.shi.7393"><i class="fa fa-facebook"></i> Facebook</a>
+				</li>
+				
+				
+				<li>
+					<a href="http://github.com/shiyuan"><i class="fa fa-github"></i> GitHub</a>
+				</li>
+				
+				
+				
+				
+			</ul><!-- /.dl-submenu -->
+		</li>
+		<li>
+		    <a href="/learning">learning</a>
+		</li>
+                <li> 
+                     <a href="#">Life</a>
+                     <ul class="dl-submenu">
+                          <li>
+                             <a href="/college-life">CCNU</a>
+			  </li>
+                          <li>
+                             <a href="/now">now</a>
+                          </li>
+                     </ul>
+                </li>
+		<li>
+			<a href="#">Posts</a>
+			<ul class="dl-submenu">
+				<li><a href="/posts/">All Posts</a></li>
+				<li><a href="/tags/">All Tags</a></li>
+			</ul>
+		</li>
+		<li><a href="http://blog.csdn.net/shiyuankongbu" target="_blank">CSDN</a></li><li><a href="http://wpa.qq.com/msgrd?v=3&uin=565099505&site=qq&menu=yes"" target="_blank">QQ</a></li>
+	</ul><!-- /.dl-menu -->
+</nav><!-- /.dl-menuwrapper -->
+
+
+
+
+<div id="main" role="main">
+  <article class="entry">
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">逻辑回归模型</h1>
+        
+      </div><!-- /.header-title-wrap -->
+    </header>
+    <div class="entry-content">
+      <p>Description:</p>
+
+<p>学习笔记:<a href="/tjxxff">《统计学习方法》</a>第六章 逻辑回归模型</p>
+
+<h3>１.逻辑回归模型</h3>
+
+<p>逻辑分布：设\(X\)是连续变量，\(X\)具有以下分布函数和概率密度函数：(\(\mu\)为位置参数，\(\gamma\)为形状参数）
+$$
+F(x)=P(X \leq x)=\frac{1}{1+e^{-(x-\mu)/\gamma}}
+$$</p>
+
+<p>$$
+f(x)=F'(x)=\frac{e^{-(x-\mu)/\gamma}}{\gamma(1+e^{-(x-\mu)/\gamma})^{2}}
+$$</p>
+
+<p>概率函数曲线类似正态分布；分布函数为\(S\)形曲线，且关于\((\mu,\frac{1}{2})\)中心对称，也就是有：
+$$
+F(-x+\mu)=1-F(x+\mu)
+$$</p>
+
+<p>逻辑回归模型：设输入为 \(x \in R^{n}\)，输出为 \(Y \in \{-1,+1\}\)，\(w\)为权值向量，\(b\)为偏置(可以加到 \(w\)中)</p>
+
+<p>$$
+P(Y=1|x)=\frac{e^{w \cdot x}}{1+e^{w \cdot x}}
+$$</p>
+
+<p>$$
+P(Y=0|x)=\frac{1}{1+e^{w \cdot x}}
+$$</p>
+
+<p>这里定义几率 \(odds\) 为事件发生和不发生的概率之比，那么对于逻辑回归就有：
+$$
+odds=\frac{p}{1-p}=\frac{P(Y=1|x)}{P(Y=0|x)}=e^{w \cdot x}
+$$
+对其取对数可以得到线性函数 \(w \cdot x \)</p>
+
+<p>接下来用极大似然估计法估计模型的参数 \(\hat{w}\)
+设： \(P(Y=1|x)=\pi(x)，P(Y=0|x)=1-\pi(x)\)
+似然函数为：
+$$
+\prod_{i=1}^{N}[\pi(x_i)]^{y_i}[1-\pi(x_i)]^{1-y_i}
+$$
+对数似然函数为：</p>
+
+<p>$$
+L(w)=\sum_{i=1}^{N}[y_i \log(\pi(x_i))+(1-y_i) \log(1-\pi(x_i))]
+$$</p>
+
+<p>$$
+L(w)=\sum_{i=1}^{N}[y_i\log\frac{\pi(x_i)}{1-\pi(x_i)}+\log(1-\pi(x_i))]
+$$</p>
+
+<p>$$
+L(w)=\sum_{i=1}^{N}[y_i(w \cdot x)-\log(1+e^{w \cdot x})]
+$$</p>
+
+<p>\(L(w)\)取极大值，\(\hat{w}\) 即为逻辑回归模型参数</p>
+
+<p>多项逻辑回归模型：
+$$
+P(Y=k|x)=\frac{e^{w_k \cdot x}}{1+\sum_{k=1}^{K-1}e^{w_k \cdot x}}，k=1,2,...,K-1
+$$</p>
+
+<p>$$
+P(Y=K|x)=\frac{1}{1+\sum_{k=1}^{K-1}e^{w_k \cdot x}}
+$$</p>
+
+<h3>2.最大熵模型</h3>
+
+<p>最大熵原理：在约束条件下服从均匀分布，熵最大</p>
+
+<p>确定联合分布\(P(X,Y)\)的经验分布和边缘分布\(P(X)\)的经验分布，以\(\widetilde{P}(X,Y),\widetilde{P}(X)\)表示：</p>
+
+<p>$$
+\widetilde{P}(X=x,Y=y)=\frac{v(X=x,Y=y)}{N}，\widetilde{P}(X=x)=\frac{v(X=x)}{N}，v表示频数
+$$</p>
+
+<p>用特征函数来表示输入和输出的关系：  <br/>
+$$
+f(x,y)=1,x与y满足事实
+$$</p>
+
+<p>$$
+f(x,y)=0,其他
+$$</p>
+
+<h3>未完待续</h3>
+
+      <footer class="entry-meta">
+        
+        
+      </footer>
+
+<!-- 多说评论框 start -->
+        <div class="ds-thread" data-thread-key="" data-title="逻辑回归模型" data-url=""></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"shiyuan404"};
+        (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                 || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+        </script>
+<!-- 多说公共JS代码 end -->
+
+
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2015 Shi Yuan. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/">HPSTR Theme</a>.</span>
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="../assets/js/scripts.min.js"></script>
+          
+
+</body>
+</html>
