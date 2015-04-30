@@ -297,13 +297,7 @@ h4,
 h5,
 h6 {
 /*  font-family: Consolas, Arial, sans-serif;*/
-font-family: Consolas,Calibri,
-             "Microsoft YaHei", "微软雅黑",
-             STXihei, "华文细黑",
-	     monospace, Calibri,
-             serif,
-             Arial,
-             sans-serif;
+font-family: Consolas,"Microsoft YaHei", "微软雅黑",STXihei, "华文细黑",monospace,Calibri,serif,Arial,sans-serif;
 }
 
 h1 {
