@@ -111,8 +111,4 @@ To learn more about how to customize the theme, include feature images in posts,
 
 Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@mmistakes](http://twitter.com/mmistakes) or [file a GitHub Issue](https://github.com/mmistakes/hpstr-jekyll-theme/issues/new). And if you make something cool with this theme feel free to let me know.
 
----
 
-## License
-
-This theme is free and open source software, distributed under the [The MIT License](https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/LICENSE). So feel free to to modify this theme to suit your needs. 
