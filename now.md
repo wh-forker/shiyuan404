@@ -17,15 +17,11 @@ Online Course:
 * 史记(一) `coursera`    
 * Intro to Machine Learning `udacity`    
 * Microeconomics Principles  `coursera`    
+* Model Thinking `coursera` `coursera`     
+* Machine Learning `coursera` 
 
-learning:
-
-* Model Thinking `coursera` `complete 7/10`     
-* Machine Learning `coursera` `挂了，重修中`    
-* Coding the Matrix `开坑中`    
-* Linear Algebra - Foundations to Frontiers `开坑中`
-* Animal Behavior and Welfare `waiting`    
-
+learing:
+null
 
 <br>
 Study:    

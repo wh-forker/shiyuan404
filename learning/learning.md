@@ -11,12 +11,8 @@ Just record some learning note
 <br>
 
 
-### [统计学习方法](/tjxxff)
+[统计学习方法](/tjxxff)
 
-### 统计学习方法 (/tjxxff)
+[Microecon](/microecon)
 
-统计学习方法 (/tjxxff)
-
-### [Microecon](/microecon)
-
-### [Model Thinking](/model-thinking)
+[Model Thinking](/model-thinking)
