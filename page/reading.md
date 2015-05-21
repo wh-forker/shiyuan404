@@ -6,7 +6,7 @@ tags: life
 ---
 
 Description:    
-Records some of the books in my recent life    
+Record some of the books in my recent life    
 
 <hr>
 2015:   

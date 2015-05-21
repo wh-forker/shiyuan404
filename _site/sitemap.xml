@@ -50,6 +50,10 @@
     </url>
     
     <url>
+        <loc>/movie/</loc>
+    </url>
+    
+    <url>
         <loc>/naive-Bayes/</loc>
     </url>
     
