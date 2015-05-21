@@ -1,6 +1,6 @@
 ---
 layout: page
-title: my reading
+title: reading
 permalink: /reading/
 tags: life
 ---
@@ -17,6 +17,11 @@ Records some of the books in my recent life
 * 我喜欢你 要不要告诉你 `慕容引刀`    
 * 趁，此生未老 `阿Sam`    
 * 自控力 `凯利·麦格尼格尔`    
+* 我得过最重的病，是想你 `咸泡饭`   
+* 单恋 `东野圭吾`   
+* 人生总要慢慢熬 `黄桐`   
+* 去，你的旅行 `阿sam`   
+* 如果世上不再有猫 `川村元气`   
 * 乖，摸摸头 `大冰`   
 * 世界上的童话都是写给大人看的 `陈谌`   
 * 小王子 `安东尼·德·圣·埃克苏佩里`   
