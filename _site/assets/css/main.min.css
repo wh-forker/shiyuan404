@@ -297,13 +297,7 @@ h4,
 h5,
 h6 {
 /*  font-family: Consolas, Arial, sans-serif;*/
-font-family: Consolas,Calibri,
-             "Microsoft YaHei", "微软雅黑",
-             STXihei, "华文细黑",
-	     monospace, Calibri,
-             serif,
-             Arial,
-             sans-serif;
+font-family: Consolas,"Microsoft YaHei", "微软雅黑",STXihei, "华文细黑",monospace,Calibri,serif,Arial,sans-serif;
 }
 
 h1 {
@@ -379,7 +373,7 @@ blockquote {
 .entry-content .footnotes li,
 .entry-content .footnotes p {
   margin-bottom: 26px;
-  margin-bottom: 1.625rem;
+  margin-bottom: 1.25rem;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1
@@ -4752,7 +4746,7 @@ body {
 @media only screen and (min-width: 62.5em) {
   .header-title h1 {
     font-size: 60px;
-    font-size: 3.75rem;
+    font-size: 2.8rem;
   }
 }
 
@@ -4767,7 +4761,7 @@ body {
 @media only screen and (min-width: 48em) {
   .header-title h2 {
     font-size: 30px;
-    font-size: 1.875rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -5223,7 +5217,7 @@ body {
 
 @media only screen and (min-width: 62.5em) {
   #post-index article {
-    padding: 50px 80px;
+    padding: 30px 80px;
     margin-bottom: 30px;
   }
 }
