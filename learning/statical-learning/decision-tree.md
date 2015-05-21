@@ -5,6 +5,8 @@ permalink: /decision-tree/
 tags: learning
 ---
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 Description:
 
 学习笔记：[《统计学习方法笔记》](/tjxxff)第五章 决策树

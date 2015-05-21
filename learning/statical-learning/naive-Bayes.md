@@ -5,6 +5,8 @@ permalink: /naive-Bayes/
 tags: learning
 ---
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 Description:
 
 学习笔记：[《统计学习方法》](/tjxxff)第四章 朴素贝叶斯法

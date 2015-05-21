@@ -5,6 +5,8 @@ permalink: /tjxxff/
 tags: learning
 ---
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 Description:
 
 《统计学习方法》学习笔记
