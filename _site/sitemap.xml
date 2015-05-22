@@ -58,10 +58,6 @@
     </url>
     
     <url>
-        <loc>/now/</loc>
-    </url>
-    
-    <url>
         <loc>/perceptron/</loc>
     </url>
     
@@ -71,6 +67,10 @@
     
     <url>
         <loc>/reading/</loc>
+    </url>
+    
+    <url>
+        <loc>/recent-life/</loc>
     </url>
     
     <url>

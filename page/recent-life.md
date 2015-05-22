@@ -1,12 +1,13 @@
 ---
 layout: page
 title: recent life
-permalink: /now/
+permalink: /recent-life/
 tags: life
 ---
 
 Description:    
-Just records some of the books , movies and courses in my recent life    
+Record something interesting in my recent life    
+
 
 <br>
 Online Course:   
@@ -20,28 +21,4 @@ Online Course:
 * Model Thinking `coursera` `coursera`     
 * Machine Learning `coursera` 
 
-learing:
-null
-
-<br>
-Study:    
-
-* 编程珠玑    
-* 统计学习方法 `李航`    
-
-
-<br>
-TV Show:    
-
-* Lost    
-* Elementary    
-* The Walking Dead    
-
-
-<br>
-Documentary:    
-
-* 搭车去柏林    
-* 看见台湾    
-* The.Internets.Own.Boy.
 

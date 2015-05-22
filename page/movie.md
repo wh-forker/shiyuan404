@@ -68,5 +68,23 @@ what I thought it's terrible:
 * 天师斗僵尸
 * 凯尔经的秘密
 * 冲上云霄
+* 哆啦A梦-伴我同行
+<br>
+
+<hr>
+## Others
+<br>
+TV Show:
+
+* Lost
+* Elementary
+* The Walking Dead
+
 
 <br>
+Documentary:
+
+* 搭车去柏林
+* 看见台湾
+* The.Internets.Own.Boy.
+
