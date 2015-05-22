@@ -5,22 +5,22 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>朴素贝叶斯法 &#8211; Shiyuan's blog</title>
-<meta name="description" content="Loser">
-<meta name="keywords" content="learning">
+<title>Notive &#8211; Shiyuan's blog</title>
+<meta name="description" content="The blog you're viewing is unavailable, you may want to visit my backup(blog.shiyuan404.com)">
+<meta name="keywords" content="intro">
 
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="朴素贝叶斯法">
-<meta property="og:description" content="Loser">
-<meta property="og:url" content="/naive-Bayes/">
+<meta property="og:title" content="Notive">
+<meta property="og:description" content="The blog you're viewing is unavailable, you may want to visit my backup(blog.shiyuan404.com)">
+<meta property="og:url" content="/Notive/">
 <meta property="og:site_name" content="Shiyuan's blog">
 
 
 
-<link rel="canonical" href="/naive-Bayes/">
+<link rel="canonical" href="/Notive/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Shiyuan's blog Feed">
 
 
@@ -44,7 +44,7 @@
 
 </head>
 
-<body id="page" >
+<body id="post" >
 
 <!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
 
@@ -117,70 +117,42 @@
 
 
 <div id="main" role="main">
-  <article class="entry">
+  <article class="hentry">
     <header class="header-title">
       <div class="header-title-wrap">
-        <h1 class="entry-title">朴素贝叶斯法</h1>
+        
+          <h1 class="entry-title"><a href="/Notive/" rel="bookmark" title="Notive">Notive</a></h1>
+        
+        <h2>May 22, 2015</h2>
         
       </div><!-- /.header-title-wrap -->
     </header>
     <div class="entry-content">
-      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+      <h2>Something about me</h2>
 
+<p><embed src="http://www.xiami.com/widget/39930265_48074,_235_346_000000_ffffff_1/multiPlayer.swf" type="application/x-shockwave-flash" width="300" height="52" wmode="transparent"></embed></p>
 
-<p>Description:</p>
-
-<p>学习笔记：<a href="/tjxxff">《统计学习方法》</a>第四章 朴素贝叶斯法</p>
-
-<p><br></p>
-
-<h3>1.朴素贝叶斯</h3>
-
-<p>朴素贝叶斯法是基于贝叶斯定理和特征条件独立假设的分类方法，本质上是学习生成数据的机制，属于生成模型  <br/>
-后验概率：</p>
-
-<p>$$
-P(Y=c_k|X=x)=\frac{P(X=x|Y=c_k)P(Y=c_k)}{\sum_{k}P(X=x|Y=c_k)P(Y=c_k)}
-$$</p>
-
-<p>$$
-P(Y=c_k|X=x)=\frac{P(Y=c_k) \prod_j P(X^{(j)}=x^{(j)}| Y=c_k) }{\sum_{k}P(X=x|Y=c_k)P(Y=c_k)}
-$$</p>
-
-<p>考虑到分母都是一样的，我们定义贝叶斯分类器如下：
-$$
-f(x)=arg \max_{c_k} P(Y=c_k) \prod_j P(X^{(j)}=x^{(j)}|Y=c_k)
-$$</p>
-
-<p><br></p>
-
-<h3>2.贝叶斯估计</h3>
-
-<p>最大似然估计的做法有可能导致概率值为0，因而导致最终后验概率均为0，故引入条件概率的贝叶斯估计：</p>
-
-<p>$$
-P_\lambda(X^{(j)}=a_{jl}|Y=c_k) = \frac{ \sum_{i=1}^{N} I(x_i^{(j)}=a_{jl},y_i=c_k)+\lambda}{ \sum_{i=1}^{N} I(y_i=c_k)+S_j \lambda}
-$$</p>
-
-<p>\(\lambda=0\) 时,为朴素贝叶斯算法  <br/>
-\(\lambda=1\) 时,为拉普拉斯平滑,即有:  <br/>
-$$
-\sum_{l=1}^{S_j} P_\lambda(X^{(j)}=a_{jl}|Y=c_k)=1
-$$</p>
-
-<p>先验概率的贝叶斯估计为：</p>
-
-<p>$$
-P_\lambda (Y=c_k)=\frac{\sum_{i=1}^{N}I(y_i=c_k)+\lambda}{N+K \lambda}
-$$</p>
+<p>Name:  shiyuan
+Gender: Male
+Age:    21
+Location: Beijing
+Education: Central China Normal University
+    Bachelor, Software Engineering
+Email: shiyuan404@hotmail.com
+QQ:  565099505
+CSDN: http://blog.csdn.net/shiyuankongbu
+Job: Algorithm engineer, Diditaxi in Beijing</p>
 
       <footer class="entry-meta">
+        <span class="entry-tags"><a href="/tags/#intro" title="Pages tagged intro" class="tag">intro</a></span>
+        <span><a href="/Notive/" rel="bookmark" title="Notive">Notive</a> was published on <span class="entry-date date published updated"><time datetime="2015-05-22T00:00:00-04:00">May 22, 2015</time></span></span>
         
+        <span class="author vcard"><span class="fn"><a href="/about/" title="About Shi Yuan">Shi Yuan</a></span></span>
         
       </footer>
-
+      
 <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="" data-title="朴素贝叶斯法" data-url=""></div>
+        <div class="ds-thread" data-thread-key="2015-05-22 00:00:00 -0400" data-title="Notive" data-url=""></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -196,9 +168,18 @@ var duoshuoQuery = {short_name:"shiyuan404"};
         </script>
 <!-- 多说公共JS代码 end -->
 
-
+       
     </div><!-- /.entry-content -->
     
+    
+    
+    <div class="read-more">
+      
+      <div class="read-more-list">
+        
+      </div><!-- /.read-more-list -->
+      
+    </div><!-- /.read-more -->
   </article>
 </div><!-- /#main -->
 
@@ -211,7 +192,7 @@ var duoshuoQuery = {short_name:"shiyuan404"};
 
 <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="../assets/js/scripts.min.js"></script>
-          
+	        
 
 </body>
 </html>
