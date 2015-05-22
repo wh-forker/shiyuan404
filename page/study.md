@@ -6,7 +6,7 @@ tags: life
 ---
 
 Description:    
-learning note ...    
+learning record ...    
 
 Online Course:
 

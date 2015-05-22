@@ -5,7 +5,6 @@ permalink: /learning/
 ---
 
 Description:
-
 Just record some learning note
 
 <br>
