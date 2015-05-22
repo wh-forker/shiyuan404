@@ -1,6 +1,6 @@
 ---
 layout: page
-title: reading
+title: movie
 permalink: /movie/
 tags: life
 ---
