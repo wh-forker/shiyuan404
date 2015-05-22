@@ -8,8 +8,7 @@ tags: life
 Description:    
 learning note ...    
 
-<hr>
-online Course:
+Online Course:
 
 * Introduction to Computer Science and Programming Using Python `edx`
 * The Data Scientist's Toolbox `cousera`

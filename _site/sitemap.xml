@@ -78,6 +78,10 @@
     </url>
     
     <url>
+        <loc>/study/</loc>
+    </url>
+    
+    <url>
         <loc>/tags/</loc>
     </url>
     
@@ -93,7 +97,15 @@
         <loc>/tjxxff/</loc>
     </url>
     
+    <url>
+        <loc>/travel/</loc>
+    </url>
+    
 
+    
+    <url>
+        <loc>/Niotice/</loc>
+    </url>
     
     <url>
         <loc>/Notice/</loc>
