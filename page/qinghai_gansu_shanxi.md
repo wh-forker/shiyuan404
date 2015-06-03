@@ -14,7 +14,7 @@ travel records
 ## test for image
 
 <figure>
-	<a href="./images/2015_qinghai_gansu_xian/P50525-125003.jpg"><img src="./images/2015_qinghai_gansu_xian/P50525-125003.jpg"></a>
+	<a href="./images/2015_qinghai_gansu_shanxi/P50525-125003.jpg"><img src="./images/2015_qinghai_gansu_shanxi/P50525-125003.jpg"></a>
 	<figcaption>test test test</figcaption>
 </figure>
 
