@@ -2,8 +2,6 @@
 layout: page
 title: travel
 permalink: /qinghai_gansu_shanxi/
-image:
-  feature: 2015_qinghai_gansu_xian/P50525-125003.jpg
 tags: life
 ---
 
@@ -15,6 +13,11 @@ travel records
 
 <figure>
 	<a href="../images/2015_qinghai_gansu_shanxi/P50525-125003.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-125003.jpg"></a>
+	<figcaption>test test test</figcaption>
+</figure>
+
+<figure>
+	<a href="../images/2015_qinghai_gansu_shanxi/P50525-132156.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-132156.jpg"></a>
 	<figcaption>test test test</figcaption>
 </figure>
 
