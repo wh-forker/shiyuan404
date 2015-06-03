@@ -11,6 +11,13 @@ Description:
 travel records     
 
 
+## test for image
+
+<figure>
+	<a href="2015_qinghai_gansu_xian/P50525-125003.jpg"><img src="2015_qinghai_gansu_xian/P50525-125003.jpg"></a>
+	<figcaption>test test test</figcaption>
+</figure>
+
 ##Cost:(粗略统计:	<b>2972.5</b>)    
 
 ###Total Transport: <b>1559</b>    
