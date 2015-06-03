@@ -12,7 +12,7 @@ travel records
 ## test for image
 
 <figure>
-	<a href="2015_qinghai_gansu_shanxi/P50525-132156.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-132156.jpg"></a>
+	<a href="../images/2015_qinghai_gansu_shanxi/P50525-132156.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-132156.jpg"></a>
 	<figcaption>test test test</figcaption>
 </figure>
 
