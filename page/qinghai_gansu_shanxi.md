@@ -2,6 +2,8 @@
 layout: page
 title: travel
 permalink: /qinghai_gansu_shanxi/
+image:
+  feature: 2015_qinghai_gansu_xian/P50525-125003.jpg
 tags: life
 ---
 
@@ -9,7 +11,7 @@ Description:
 travel records     
 
 
-Cost:(粗略统计:	<b>2972.5</b>)    
+##Cost:(粗略统计:	<b>2972.5</b>)    
 
 ###Total Transport: <b>1559</b>    
 
