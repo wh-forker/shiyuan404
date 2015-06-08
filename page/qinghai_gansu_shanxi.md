@@ -32,6 +32,19 @@ Description:
 	<figcaption>逃票，被这个小哥抓到，送出去了</figcaption>
 </figure>
 
+<figure>
+	<a href="../images/2015_qinghai_gansu_shanxi/P50529-193410.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50529-193410.jpg"></a>
+	<figcaption>雅丹魔鬼城，这坨是个什么鬼</figcaption>
+</figure>
 
+<figure>
+	<a href="../images/2015_qinghai_gansu_shanxi/P50529-202721.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50529-202721.jpg"></a>
+	<figcaption>传说这地方最热的时候六七十度，- -，突然闻到一股烤肉的味道~</figcaption>
+</figure>
+
+<figure>
+	<a href="../images/2015_qinghai_gansu_shanxi/P50529-205513.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50529-205513.jpg"></a>
+	<figcaption>戈壁滩上，九点的日落</figcaption>
+</figure>
 
 
