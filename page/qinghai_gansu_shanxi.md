@@ -17,6 +17,6 @@ day1:
 </figure>
 
 <figure>
-	<a href="../images/2015_qinghai_gansu_shanxi/P50525-132156 - 副本"><img src="../images/2015_qinghai_gansu_shanxi/P50525-132156 - 副本"></a>
+	<a href="../images/2015_qinghai_gansu_shanxi/P50525-132156_0"><img src="../images/2015_qinghai_gansu_shanxi/P50525-132156_0"></a>
 	<figcaption>test test test</figcaption>
 </figure>
