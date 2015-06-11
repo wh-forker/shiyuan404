@@ -62,16 +62,11 @@ Description:
 	<figcaption>沿途风光</figcaption>
 </figure>
 
-
-
-
-
-
-
 ###甘肃：
-1.莫高窟
-2.敦煌包车一天：
-鸣沙山-阳关-玉门关-魔鬼城-白马塔
+1.莫高窟    
+2.敦煌包车一天：    
+鸣沙山-阳关-玉门关-魔鬼城-白马塔    
+
 <figure>
 	<a href="../images/2015_qinghai_gansu_shanxi/P50529-064907.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50529-064907.jpg"></a>
 	<figcaption>鸣沙山，有点像日落的日出</figcaption>
@@ -89,7 +84,7 @@ Description:
 
 <figure>
 	<a href="../images/2015_qinghai_gansu_shanxi/P50529-202721.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50529-202721.jpg"></a>
-	<figcaption>传说这地方最热的时候六七十度，- -，突然闻到一股烤肉的味道~</figcaption>
+	<figcaption>传说这地方最热的时候六七十度，啊咧，闻到一股烤肉的味道~</figcaption>
 </figure>
 
 <figure>
@@ -99,3 +94,15 @@ Description:
 
 
 ###西安：
+
+<figure>
+	<a href="../images/2015_qinghai_gansu_shanxi/P50601-151947.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50601-151947.jpg"></a>
+	<figcaption>肉食动物的天堂</figcaption>
+</figure>
+
+夜爬华山，十点半爬到三点半吧
+<figure class="half">
+	<a href="../images/2015_qinghai_gansu_shanxi/P50602-053131.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50602-053131.jpg"></a>
+	<a href="../images/2015_qinghai_gansu_shanxi/P50602-080440.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50602-080440.jpg"></a>
+	<figcaption>大致就这么个风光&&白天爬看到这个估计虚了，垂直的哦</figcaption>
+</figure>
