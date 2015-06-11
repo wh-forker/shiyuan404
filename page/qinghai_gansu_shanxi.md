@@ -106,3 +106,8 @@ Description:
 	<a href="../images/2015_qinghai_gansu_shanxi/P50602-080440.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50602-080440.jpg"></a>
 	<figcaption>大致就这么个风光&&白天爬看到这个估计虚了，垂直的哦</figcaption>
 </figure>
+
+<figure>
+	<a href="../images/2015_qinghai_gansu_shanxi/111.jpg"><img src="../images/2015_qinghai_gansu_shanxi/111.jpg"></a>
+	<figcaption>test o </figcaption>
+</figure>
