@@ -108,6 +108,6 @@ Description:
 </figure>
 
 <figure>
-	<a href="../images/2015_qinghai_gansu_shanxi/111.jpg"><img src="../images/2015_qinghai_gansu_shanxi/111.jpg"></a>
-	<figcaption>test o </figcaption>
+	<a href="../images/2015_qinghai_gansu_shanxi/P50611-211750-001.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50611-211750-001.jpg"></a>
+	<figcaption>毕业前浪这么一波，晒黑了不少呢</figcaption>
 </figure>
