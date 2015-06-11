@@ -1,7 +1,7 @@
 ---
 layout: page
-title: travel
-permalink: /qinghai_gansu_shanxi/
+title: travel in the Northwest
+permalink: /travel_in_the_Northwest/
 tags: life
 ---
 
