@@ -25,8 +25,47 @@ Description:
 <figure class="half">
 	<a href="../images/2015_qinghai_gansu_shanxi/P50525-124434.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-124434.jpg"></a>
 	<a href="../images/2015_qinghai_gansu_shanxi/P50525-125052.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-125052.jpg"></a>
-	<figcaption>我以为她会给我一种很安静的感觉，然后她没有</figcaption>
+	<figcaption>我以为她会给我一种很安静的感觉，然而并没有</figcaption>
 </figure>
+
+<figure>
+	<a href="../images/2015_qinghai_gansu_shanxi/P50525-151605.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-151605.jpg"></a>
+	<figcaption>变幻莫测的云</figcaption>
+</figure>
+
+<figure class="half">
+	<a href="../images/2015_qinghai_gansu_shanxi/P50525-150426.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-150426.jpg"></a>
+	<a href="../images/2015_qinghai_gansu_shanxi/P50525-160944.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-160944.jpg"></a>
+	<figcaption>白白的&&蒙蒙的</figcaption>
+</figure>
+
+<figure>
+	<a href="../images/2015_qinghai_gansu_shanxi/P50525-172531.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-172531.jpg"></a>
+	<figcaption>茶卡盐湖</figcaption>
+</figure>
+
+<figure>
+	<a href="../images/2015_qinghai_gansu_shanxi/P50525-173029.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-173029.jpg"></a>
+	<figcaption>茶卡盐湖全景</figcaption>
+</figure>
+
+<figure class="half">
+	<a href="../images/2015_qinghai_gansu_shanxi/P50525-172627.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-172627.jpg"></a>
+	<a href="../images/2015_qinghai_gansu_shanxi/P50525-174041.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-174041.jpg"></a>
+	<figcaption>好没真实感呢</figcaption>
+</figure>
+
+
+<figure class="half">
+	<a href="../images/2015_qinghai_gansu_shanxi/P50525-175218.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-175218.jpg"></a>
+	<a href="../images/2015_qinghai_gansu_shanxi/P50525-185550.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-185550.jpg"></a>
+	<figcaption>沿途风光</figcaption>
+</figure>
+
+
+
+
+
 
 
 ###甘肃：
