@@ -22,6 +22,11 @@ Description:
 	<figcaption>天很蓝，云很厚，水很清</figcaption>
 </figure>
 
+<figure class="half">
+	<a href="../images/2015_qinghai_gansu_shanxi/P50525-124434.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-124434.jpg"></a>
+	<a href="../images/2015_qinghai_gansu_shanxi/P50525-125052.jpg"><img src="../images/2015_qinghai_gansu_shanxi/P50525-125052.jpg"></a>
+	<figcaption>我以为她会给我一种很安静的感觉，然后她没有</figcaption>
+</figure>
 
 
 ###甘肃：
