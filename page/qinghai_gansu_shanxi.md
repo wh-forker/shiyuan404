@@ -1,7 +1,7 @@
 ---
 layout: page
 title: travel in the Northwest
-permalink: /travel_in_the_Northwest/
+permalink: /travel-in-the-Northwest/
 tags: life
 ---
 
