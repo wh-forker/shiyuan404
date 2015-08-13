@@ -385,7 +385,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: Consolas,monospace;
+  font-family: Monaco,Courier New,monospace!important;
 }
 
 p code,
