@@ -6,29 +6,29 @@ tags: c++
 ---
 ###Preface:
 
-XML(Extensible Markup Language)ÊÇÒ»ÖÖ½á¹¹ĞÔ½ÏÇ¿µÄ±ê¼ÇÓïÑÔ£¬¿ÉÒÔÓÃÓÚÒ»Ğ©ÏîÄ¿µÄ¹ÜÀíÅäÖÃÎÄ¼ş¡£Í¬JSONÏà±È£¬XMLÏÔµÃ¸üÎªÓ·Ö×£¬ÇÒ½âÎöÄÑÒ×ÉÏ¸üÎª¸´ÔÓ£¬µ«ÊÇ¿¼ÂÇµ½XML¸üÒ×ÓÚÀ©Õ¹¸üÖ±¹Û£¬¶øÇÒ×÷Îª¹ÜÀíÅäÖÃÎÄ¼ş¶ÔÄÚ´æºÍÊ±¼äµÄÒªÇó²¢²»Ì«¸ß£¬XML²¢²»Ê§ÎªÒ»ÖÖºÃµÄ¹ÜÀíÅäÖÃÎÄ¼ş¸ñÊ½¡£×î½üÔÚÑ§Ï°c++£¬Òò´ËÓĞ±ØÒª½øĞĞÑ§Ï°Ò»ÏÂLibxml2(»ùÓÚcµÄ¿ªÔ´XML½âÎö°ü)¡£   
+XML(Extensible Markup Language)æ˜¯ä¸€ç§ç»“æ„æ€§è¾ƒå¼ºçš„æ ‡è®°è¯­è¨€ï¼Œå¯ä»¥ç”¨äºä¸€äº›é¡¹ç›®çš„ç®¡ç†é…ç½®æ–‡ä»¶ã€‚åŒJSONç›¸æ¯”ï¼ŒXMLæ˜¾å¾—æ›´ä¸ºè‡ƒè‚¿ï¼Œä¸”è§£æéš¾æ˜“ä¸Šæ›´ä¸ºå¤æ‚ï¼Œä½†æ˜¯è€ƒè™‘åˆ°XMLæ›´æ˜“äºæ‰©å±•æ›´ç›´è§‚ï¼Œè€Œä¸”ä½œä¸ºç®¡ç†é…ç½®æ–‡ä»¶å¯¹å†…å­˜å’Œæ—¶é—´çš„è¦æ±‚å¹¶ä¸å¤ªé«˜ï¼ŒXMLå¹¶ä¸å¤±ä¸ºä¸€ç§å¥½çš„ç®¡ç†é…ç½®æ–‡ä»¶æ ¼å¼ã€‚æœ€è¿‘åœ¨å­¦ä¹ c++ï¼Œå› æ­¤æœ‰å¿…è¦è¿›è¡Œå­¦ä¹ ä¸€ä¸‹Libxml2(åŸºäºcçš„å¼€æºXMLè§£æåŒ…)ã€‚   
 
-###Install£º   
+###Installï¼š   
 1.`wget http://ftp.gnome.org/pub/GNOME/sources/libxml2/2.6/libxml2-2.6.30.tar.gz`   
 2.`tar vxf libxml2-2.6.30.tar.gz`   
-3.`./configure -prefix /home/xxx/xxx/libxml2` ÉèÖÃ°²×°Â·¾¶(±ØĞëÊÇ¾ø¶ÔÂ·¾¶)   
+3.`./configure -prefix /home/xxx/xxx/libxml2` è®¾ç½®å®‰è£…è·¯å¾„(å¿…é¡»æ˜¯ç»å¯¹è·¯å¾„)   
 4.`make && make install`
 
 ###Basic:
-¼ÙÉèÎÒÃÇÒÑ¾­Ğ´ºÃÁËÄ³¸ö xxx.cc £¬Ò»°ãÖ´ĞĞ`g++ -g -I../../thirdparty/libxml2/include/libxml2 -L../../thirdparty/libxml2/lib -lxml2 xxx.cc -o xxx` ½øĞĞ±àÒë£¬È»ºóÔËĞĞ `./xxx` £¬½ö¶ÔÒ»¸öÎÄ¼ş£¬ÎÒÃÇ¾ÍÒª½øĞĞÈç´Ë¸´ÔÓµÄ²Ù×÷£¬Òò´ËĞèÒªÓÃMakefileÀ´¹ÜÀí£¬¶¨ÒåÄ¿Â¼½á¹¹ÈçÏÂ£º  
+å‡è®¾æˆ‘ä»¬å·²ç»å†™å¥½äº†æŸä¸ª xxx.cc ï¼Œä¸€èˆ¬æ‰§è¡Œ`g++ -g -I../../thirdparty/libxml2/include/libxml2 -L../../thirdparty/libxml2/lib -lxml2 xxx.cc -o xxx` è¿›è¡Œç¼–è¯‘ï¼Œç„¶åè¿è¡Œ `./xxx` ï¼Œä»…å¯¹ä¸€ä¸ªæ–‡ä»¶ï¼Œæˆ‘ä»¬å°±è¦è¿›è¡Œå¦‚æ­¤å¤æ‚çš„æ“ä½œï¼Œå› æ­¤éœ€è¦ç”¨Makefileæ¥ç®¡ç†ï¼Œå®šä¹‰ç›®å½•ç»“æ„å¦‚ä¸‹ï¼š  
  
 ```
-©°©¤ .
-©À©¤ thirdparty
-©¦      ©¸©¤ libxml2
-©À©¤  common
-©¦      ©¸©¤ libxml2_test
-©¦             ©À©¤ Makefile 
-©¦             ©À©¤ produceXML.cc
-©¸             ©¸©¤ parseXML.cc
+â”Œâ”€ .
+â”œâ”€ thirdparty
+â”‚      â””â”€ libxml2
+â”œâ”€  common
+â”‚      â””â”€ libxml2_test
+â”‚             â”œâ”€ Makefile 
+â”‚             â”œâ”€ produceXML.cc
+â””             â””â”€ parseXML.cc
 ```
 
-ÕâÀïÓÃc¼òµ¥µØÊµÏÖÁËXMLÎÄ¼ş´´½¨ºÍ½âÎö£¬Ëù¶ÔÓ¦MakefileÎÄ¼şÄÚÈİÈçÏÂ£º   
+è¿™é‡Œç”¨cç®€å•åœ°å®ç°äº†XMLæ–‡ä»¶åˆ›å»ºå’Œè§£æï¼Œæ‰€å¯¹åº”Makefileæ–‡ä»¶å†…å®¹å¦‚ä¸‹ï¼š   
 
 ```
 # Makefile
@@ -49,9 +49,9 @@ clean:
 	rm -rf test.xml
 ```
 
-¶ÔÓÚ¾ßÌåÊµÏÖµÄÎÄ¼şÀï£¬Ê×ÏÈĞèÒªÒıÈëÍ·ÎÄ¼ş£¬`#include <libxml/tree.h>` ºÍ `#include <libxml/parser.h>`   
-¡£¡£¡£¡£
-¡£¡£¡£¡£
+å¯¹äºå…·ä½“å®ç°çš„æ–‡ä»¶é‡Œï¼Œé¦–å…ˆéœ€è¦å¼•å…¥å¤´æ–‡ä»¶ï¼Œ`#include <libxml/tree.h>` å’Œ `#include <libxml/parser.h>`   
+ã€‚ã€‚ã€‚ã€‚
+ã€‚ã€‚ã€‚ã€‚
 
 ```
 // produceXML.cc
@@ -168,7 +168,7 @@ int main(int argc,char** argv){
 		else if(xmlStrcmp(cur->name, BAD_CAST "ProxySchedules") == 0){
 			xmlChar* tmp = xmlGetProp(cur, BAD_CAST "name");
 			if(strcmp(reinterpret_cast<char*>(tmp),"taxi") == 0){
-				printf("\n©°©¤schedule=[taxi]\n");
+				printf("\nâ”Œâ”€schedule=[taxi]\n");
 				ret |= parseProxySchedules(cur);
 			}
 		}
@@ -196,7 +196,7 @@ int parseProxyObjects(xmlNodePtr cur){
 			tmp = xmlGetProp(node, BAD_CAST "so");
 			proxy_so = reinterpret_cast<char*>(tmp);
 			
-			printf("\n©°©¤type=[Proxy] name=[%s] so=[%s]\n",proxy_name.c_str(),proxy_so.c_str());
+			printf("\nâ”Œâ”€type=[Proxy] name=[%s] so=[%s]\n",proxy_name.c_str(),proxy_so.c_str());
 			xmlNodePtr resource_node = node->xmlChildrenNode;
 			for(; resource_node != NULL; resource_node = resource_node->next){	
 				if(xmlStrcmp(resource_node->name,BAD_CAST "Resource")){
@@ -210,7 +210,7 @@ int parseProxyObjects(xmlNodePtr cur){
 				tmp = xmlGetProp(resource_node, BAD_CAST "class");
 				resource_class = reinterpret_cast<char*>(tmp);
 
-				printf("©¸©¤©¤©¤type=[resource] name=[%s] class=[%s]\n",resource_name.c_str(),resource_name.c_str());
+				printf("â””â”€â”€â”€type=[resource] name=[%s] class=[%s]\n",resource_name.c_str(),resource_name.c_str());
 
 				xmlNodePtr config_node = resource_node->xmlChildrenNode;
 				for(; config_node != NULL; config_node = config_node->next){
@@ -225,7 +225,7 @@ int parseProxyObjects(xmlNodePtr cur){
 					tmp = xmlGetProp(config_node, BAD_CAST "value");
 					config_value = reinterpret_cast<char*>(tmp);
 					
-					printf("©¸©¤©¤©¤©¤©¤type=[config] name=[%s] value=[%s]\n",config_name.c_str(),config_value.c_str());
+					printf("â””â”€â”€â”€â”€â”€type=[config] name=[%s] value=[%s]\n",config_name.c_str(),config_value.c_str());
 				}
 			}
 		}
@@ -246,7 +246,7 @@ int parseProxySchedules(xmlNodePtr cur){
 		}
 		tmp = xmlGetProp(node, BAD_CAST "proxy");
 		proxy = reinterpret_cast<char*>(tmp);
-		printf("©¸©¤©¤©¤proxy=[%s]\n",proxy.c_str());
+		printf("â””â”€â”€â”€proxy=[%s]\n",proxy.c_str());
 	}
 	return 0;
 }
@@ -274,15 +274,15 @@ int parseProxySchedules(xmlNodePtr cur){
 
 ```
 
-©°©¤type=[Proxy] name=[filterProxy] so=[../plugins/filterProxy.so]
-©¸©¤©¤©¤type=[resource] name=[filterResource] class=[filterResource]
-©¸©¤©¤©¤©¤©¤type=[config] name=[THRESHOLD] value=[0.0001]
+â”Œâ”€type=[Proxy] name=[filterProxy] so=[../plugins/filterProxy.so]
+â””â”€â”€â”€type=[resource] name=[filterResource] class=[filterResource]
+â””â”€â”€â”€â”€â”€type=[config] name=[THRESHOLD] value=[0.0001]
 
-©°©¤type=[Proxy] name=[strModelProxy] so=[../plugins/strModelProxy.so]
-©¸©¤©¤©¤type=[resource] name=[strModelResource] class=[strModelResource]
+â”Œâ”€type=[Proxy] name=[strModelProxy] so=[../plugins/strModelProxy.so]
+â””â”€â”€â”€type=[resource] name=[strModelResource] class=[strModelResource]
 
-©°©¤schedule=[taxi]
-©¸©¤©¤©¤proxy=[filterProxy]
-©¸©¤©¤©¤proxy=[strModelProxy]
+â”Œâ”€schedule=[taxi]
+â””â”€â”€â”€proxy=[filterProxy]
+â””â”€â”€â”€proxy=[strModelProxy]
 
 ```
