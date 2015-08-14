@@ -219,6 +219,7 @@ int main(int argc,char** argv){
 				printf("\n┌─schedule=[taxi]\n");
 				ret |= parseProxySchedules(cur);
 			}
+			xmlFree(tmp);
 		}
 	}
 	puts("");
@@ -226,7 +227,6 @@ int main(int argc,char** argv){
 		printf("there is something wrong\n");
 	}
 	return ret;
-	
 }
 
 int parseProxyObjects(xmlNodePtr cur){
@@ -278,6 +278,7 @@ int parseProxyObjects(xmlNodePtr cur){
 			}
 		}
 	}
+	xmlFree(tmp);
 	return 0;
 }
 
@@ -296,6 +297,7 @@ int parseProxySchedules(xmlNodePtr cur){
 		proxy = reinterpret_cast<char*>(tmp);
 		printf("└───proxy=[%s]\n",proxy.c_str());
 	}
+	xmlFree(tmp);
 	return 0;
 }
 {% endhighlight %}
