@@ -71,7 +71,7 @@ xmlNodePtr root = xmlDocGetRootElement(doc); // 读取文档时需要获取根�
 xmlNewChild(father, NULL, BAD_CAST "XXX", BAD_CAST "XXX_content"); // 创建一个子节点
 xmlNodePtr node = xmlNewText(BAD_CAST "XXX_content"); // 创建一个有内容的节点
 xmlAddChild(father, son); // 创建一个子节点
-xmlNewProp(node, BAD_CAST "XXX", BAD_CAST "XXX_value"); // 添加节点属性
+xmlSetProp(node, BAD_CAST "XXX", BAD_CAST "XXX_value"); // 添加节点属性
 xmlStrcmp(node->name , BAD_CAST "XXX"); // 判断节点是否为 XXX
 xmlGetProp(node, BAD_CAST "XXX"); // 获取节点的XXX属，返回类型为 unsigned char*
 xmlUnlinkNode(cur); // 删除节点
@@ -105,46 +105,46 @@ int main(int argc,char** argv){
 	xmlNodePtr filterProxy = xmlNewNode(NULL, BAD_CAST "Proxy");
 	xmlAddChild(proxyObjects, filterProxy);
 
-	xmlNewProp(filterProxy, BAD_CAST "name", BAD_CAST "filterProxy");
-	xmlNewProp(filterProxy, BAD_CAST "so" , BAD_CAST "../plugins/filterProxy.so");
+	xmlSetProp(filterProxy, BAD_CAST "name", BAD_CAST "filterProxy");
+	xmlSetProp(filterProxy, BAD_CAST "so" , BAD_CAST "../plugins/filterProxy.so");
 
 	xmlNodePtr filterResource = xmlNewNode(NULL, BAD_CAST "Resource");
 	xmlAddChild(filterProxy, filterResource);
 	
-	xmlNewProp(filterResource, BAD_CAST "name", BAD_CAST "filterResource");
-	xmlNewProp(filterResource, BAD_CAST "class", BAD_CAST "filterResource");
+	xmlSetProp(filterResource, BAD_CAST "name", BAD_CAST "filterResource");
+	xmlSetProp(filterResource, BAD_CAST "class", BAD_CAST "filterResource");
 
 	xmlNodePtr filterConfig = xmlNewNode(NULL, BAD_CAST "Config");
 	xmlAddChild(filterResource, filterConfig);
-	xmlNewProp(filterConfig, BAD_CAST "name", BAD_CAST "THRESHOLD");
-	xmlNewProp(filterConfig, BAD_CAST "value", BAD_CAST "0.0001");
+	xmlSetProp(filterConfig, BAD_CAST "name", BAD_CAST "THRESHOLD");
+	xmlSetProp(filterConfig, BAD_CAST "value", BAD_CAST "0.0001");
 	// Add filterProxy end
 
 	// copy  start
 	xmlNodePtr strModelProxy = xmlNewNode(NULL, BAD_CAST "Proxy");
 	xmlAddChild(proxyObjects, strModelProxy);
 
-	xmlNewProp(strModelProxy, BAD_CAST "name", BAD_CAST "strModelProxy");
-	xmlNewProp(strModelProxy, BAD_CAST "so", BAD_CAST "../plugins/strModelProxy.so");
+	xmlSetProp(strModelProxy, BAD_CAST "name", BAD_CAST "strModelProxy");
+	xmlSetProp(strModelProxy, BAD_CAST "so", BAD_CAST "../plugins/strModelProxy.so");
 
 	xmlNodePtr strModelResource = xmlNewNode(NULL, BAD_CAST "Resource");
 	xmlAddChild(strModelProxy, strModelResource);
 
-	xmlNewProp(strModelResource, BAD_CAST "name", BAD_CAST "strModelResource");
-	xmlNewProp(strModelResource, BAD_CAST "class", BAD_CAST "strModelResource");
+	xmlSetProp(strModelResource, BAD_CAST "name", BAD_CAST "strModelResource");
+	xmlSetProp(strModelResource, BAD_CAST "class", BAD_CAST "strModelResource");
 	// copy end
 
 	xmlNodePtr taxi = xmlNewNode(NULL,BAD_CAST "ProxySchedules");
 	xmlAddChild(proxy, taxi);
 
-	xmlNewProp(taxi, BAD_CAST "name", BAD_CAST "taxi");
+	xmlSetProp(taxi, BAD_CAST "name", BAD_CAST "taxi");
 	
 	xmlNodePtr pFilterProxy = xmlNewNode(NULL, BAD_CAST "Phase");
-	xmlNewProp(pFilterProxy, BAD_CAST "proxy", BAD_CAST "filterProxy");
+	xmlSetProp(pFilterProxy, BAD_CAST "proxy", BAD_CAST "filterProxy");
 	xmlAddChild(taxi, pFilterProxy);
 
 	xmlNodePtr pStrModelProxy = xmlNewNode(NULL, BAD_CAST "Phase");
-	xmlNewProp(pStrModelProxy, BAD_CAST "proxy", BAD_CAST "strModelProxy");
+	xmlSetProp(pStrModelProxy, BAD_CAST "proxy", BAD_CAST "strModelProxy");
 	xmlAddChild(taxi, pStrModelProxy);
 
 	xmlSaveFormatFileEnc(argc>1?argv[1]:"-",doc,"UTF-8",1);
@@ -358,8 +358,8 @@ int main(){
 	if(doc == NULL){
 		printf("read file failed\n");
 	}
-	// 查找 Proxys/ProxyObjects/Proxy 这一级下有 name 的标签 
-	xmlNodeSetPtr my_set = xmlXPATHParse(doc, BAD_CAST "/Proxys/ProxyObjects/Proxy[@name]")->nodesetval;
+	// 查找 ProxyObjects/Proxy 这一级下有 name 的标签 
+	xmlNodeSetPtr my_set = xmlXPATHParse(doc, BAD_CAST "//ProxyObjects/Proxy[@name]")->nodesetval;
 	for(int i = 0; i < my_set->nodeNr; i++){
 		xmlNodePtr cur = (my_set->nodeTab[i]);
 		printf("%s\n",xmlGetProp(cur, BAD_CAST "name"));
