@@ -15,7 +15,14 @@ XML(Extensible Markup Language)是一种结构性较强的标记语言，可以�
 4.`make && make install`
 
 ###Basic:
-假设我们已经写好了某个 xxx.cc ，一般执行`g++ -g -I../../thirdparty/libxml2/include/libxml2 -L../../thirdparty/libxml2/lib -lxml2 xxx.cc -o xxx` 进行编译，然后运行 `./xxx` ，仅对一个文件，我们就要进行如此复杂的操作，因此需要用Makefile来管理，定义目录结构如下：  
+假设我们已经写好了某个 xxx.cc ，一般执行   
+
+```
+g++ -g -I../../thirdparty/libxml2/include/libxml2 \
+-L../../thirdparty/libxml2/lib -lxml2 xxx.cc -o xxx 
+```
+
+进行编译，然后运行 `./xxx` ，仅对一个文件，我们就要进行如此复杂的操作，因此需要用Makefile来管理，定义目录结构如下：  
  
 ```
 ┌─ .
@@ -51,7 +58,7 @@ clean:
 
 这里列出一些基本的函数:   
 
-```
+{% highlight c %}
 typedef unsigned char xmlChar;
 #define BAD_CAST (xmlChar *)
 
@@ -68,14 +75,13 @@ xmlStrcmp(node->name , BAD_CAST "XXX"); // 判断节点是否为 XXX
 xmlGetProp(node, BAD_CAST "XXX"); // 获取节点的XXX属，返回类型为 unsigned char*
 xmlFreeDoc(doc); // 释放文档指针
 xmlMemoryDump(); // 释放所有内存资源
-```
+{% endhighlight %}
 
 下面是一个产生XML文件的c代码：   
 {% highlight c++ %}
 // produceXML.cc
 #include <stdio.h>
 #include <libxml/tree.h>
-#include <libxml/parser.h>
 
 int main(int argc,char** argv){
 
@@ -171,13 +177,13 @@ int main(int argc,char** argv){
 
 下面是一个解析XML文件的c代码：   
 {% highlight c++ %}
+// parseXML.cc
 #include <stdio.h>
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 #include <string.h>
 #include <iostream>
-#include <cstdio>
-using namespace std;
+
 int parseProxyObjects(xmlNodePtr cur);
 int parseProxySchedules(xmlNodePtr cur);
 
