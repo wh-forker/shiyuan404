@@ -50,12 +50,27 @@ clean:
 {% endhighlight %}
 
 这里列出一些基本的函数:   
-* xmlDocPtr doc = xmlNewDoc(BAD_CAST "1.0"); // 创建一个文档
-* xmlNodePtr node = xmlNewNode(NULL, BAD_CAST "XXX") // 创建一个节点
-* xmlDocSetRootElement(doc, root_node); // 每个文档需要有一个根节点
-* xmlNodePtr root = xmlDocGetRootElement(doc); // 读取文档时需要获取根节点
-* xmlNewChild(root,) // 未完待续
 
+```
+typedef unsigned char xmlChar;
+#define BAD_CAST (xmlChar *)
+
+xmlDocPtr doc = xmlNewDoc(BAD_CAST "1.0"); // 创建xml
+xmlDocPtr doc = xmlReadFile(file, "UTF-8", XML_PARSE_NOBLANKS); // 读取xml文件
+xmlSaveFormatFileEnc(file, doc, "UTF-8", 1); // 保存xml到文件
+xmlNodePtr node = xmlNewNode(NULL, BAD_CAST "XXX") // 创建一个节点
+xmlDocSetRootElement(doc, root_node); // 每个文档需要有一个根节点
+xmlNodePtr root = xmlDocGetRootElement(doc); // 读取文档时需要获取根节点
+xmlNewChild(father, NULL, BAD_CAST "XXX", BAD_CAST "XXX_content"); // 创建一个子节点
+xmlAddChild(father, son); // 创建一个子节点
+xmlNewProp(node, BAD_CAST "XXX", BAD_CAST "XXX_value"); // 添加节点属性
+xmlStrcmp(node->name , BAD_CAST "XXX"); // 判断节点是否为 XXX
+xmlGetProp(node, BAD_CAST "XXX"); // 获取节点的XXX属，返回类型为 unsigned char*
+xmlFreeDoc(doc); // 释放文档指针
+xmlMemoryDump(); // 释放所有内存资源
+```
+
+下面是一个产生XML文件的c代码：   
 {% highlight c++ %}
 // produceXML.cc
 #include <stdio.h>
@@ -132,6 +147,7 @@ int main(int argc,char** argv){
 }
 {% endhighlight %}
 
+产生结果如下：   
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <Proxys>
@@ -151,7 +167,7 @@ int main(int argc,char** argv){
   </ProxySchedules>
 </Proxys>
 ```
-
+下面是一个解析XML文件的c代码：   
 {% highlight c++ %}
 #include <stdio.h>
 #include <libxml/parser.h>
@@ -275,7 +291,7 @@ int parseProxySchedules(xmlNodePtr cur){
 }
 {% endhighlight %}
 
-
+解析结果如下：   
 ```
 
 ┌─type=[Proxy] name=[filterProxy] so=[../plugins/filterProxy.so]
