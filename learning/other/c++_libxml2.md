@@ -69,6 +69,7 @@ xmlNodePtr node = xmlNewNode(NULL, BAD_CAST "XXX") // 创建一个节点
 xmlDocSetRootElement(doc, root_node); // 每个文档需要有一个根节点
 xmlNodePtr root = xmlDocGetRootElement(doc); // 读取文档时需要获取根节点
 xmlNewChild(father, NULL, BAD_CAST "XXX", BAD_CAST "XXX_content"); // 创建一个子节点
+xmlNodePtr node = xmlNewText(BAD_CAST "XXX_content"); // 创建一个有内容的节点
 xmlAddChild(father, son); // 创建一个子节点
 xmlNewProp(node, BAD_CAST "XXX", BAD_CAST "XXX_value"); // 添加节点属性
 xmlStrcmp(node->name , BAD_CAST "XXX"); // 判断节点是否为 XXX

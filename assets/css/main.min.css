@@ -4966,7 +4966,7 @@ body {
 @media only screen and (min-width: 62.5em) {
   #post .entry-content,
   #page .entry-content {
-    max-width: 800px;
+    max-width: 900px;
     padding: 50px 80px;
     margin: 50px auto 30px auto;
   }
