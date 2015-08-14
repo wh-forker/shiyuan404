@@ -6,7 +6,7 @@ tags: c++
 ---
 ###Preface:
 
-XML(Extensible Markup Language)是一种结构性较强的标记语言，可以用于一些项目的管理配置文件。同JSON相比，XML显得更为臃肿，且解析难易上更为复杂，但是考虑到XML更易于扩展更直观，而且作为管理配置文件对内存和时间的要求并不太高，XML并不失为一种好的管理配置文件格式。最近在学习c++，因此有必要进行学习一下Libxml2(基于c的开源XML解析包)。   
+XML(Extensible Markup Language)是一种结构性较强的标记语言，可以用于一些项目的管理配置文件。同JSON相比，XML显得更为臃肿，且解析难易上更为复杂，但是考虑到XML更易于扩展更直观，而且作为管理配置文件对内存和时间的要求并不太高，XML并不失为一种好的管理配置文件格式。最近在学习c++，因此有必要学习一下Libxml2(基于c的开源XML解析包)。   
 
 ###Install：   
 1.`wget http://ftp.gnome.org/pub/GNOME/sources/libxml2/2.6/libxml2-2.6.30.tar.gz`   
@@ -28,9 +28,9 @@ XML(Extensible Markup Language)是一种结构性较强的标记语言，可以�
 └             └─ parseXML.cc
 ```
 
-这里用c简单地实现了XML文件创建和解析，所对应Makefile文件内容如下：   
+这里简单地用c++实现了XML文件创建和解析，所对应Makefile文件内容如下：   
 
-```
+{% highlight make %}
 # Makefile
 GCC = /usr/bin/g++
 CPPFLAGS = -g -O3
@@ -47,13 +47,16 @@ clean:
 	rm -rf produceXML
 	rm -rf parseXML
 	rm -rf test.xml
-```
+{% endhighlight %}
 
-对于具体实现的文件里，首先需要引入头文件，`#include <libxml/tree.h>` 和 `#include <libxml/parser.h>`   
-。。。。
-。。。。
+这里列出一些基本的函数:   
+* xmlDocPtr doc = xmlNewDoc(BAD_CAST "1.0"); // 创建一个文档
+* xmlNodePtr node = xmlNewNode(NULL, BAD_CAST "XXX") // 创建一个节点
+* xmlDocSetRootElement(doc, root_node); // 每个文档需要有一个根节点
+* xmlNodePtr root = xmlDocGetRootElement(doc); // 读取文档时需要获取根节点
+* xmlNewChild(root,) // 未完待续
 
-```
+{% highlight c++ %}
 // produceXML.cc
 #include <stdio.h>
 #include <libxml/tree.h>
@@ -127,9 +130,29 @@ int main(int argc,char** argv){
 	xmlMemoryDump();
 	return 0;
 }
-```
+{% endhighlight %}
 
 ```
+<?xml version="1.0" encoding="UTF-8"?>
+<Proxys>
+  <ProxyObjects>
+    <Proxy name="filterProxy" so="../plugins/filterProxy.so">
+      <Resource name="filterResource" class="filterResource">
+        <Config name="THRESHOLD" value="0.0001"/>
+      </Resource>
+    </Proxy>
+    <Proxy name="strModelProxy" so="../plugins/strModelProxy.so">
+      <Resource name="strModelResource" class="strModelResource"/>
+    </Proxy>
+  </ProxyObjects>
+  <ProxySchedules name="taxi">
+    <Phase proxy="filterProxy"/>
+    <Phase proxy="strModelProxy"/>
+  </ProxySchedules>
+</Proxys>
+```
+
+{% highlight c++ %}
 #include <stdio.h>
 #include <libxml/parser.h>
 #include <libxml/tree.h>
@@ -250,27 +273,8 @@ int parseProxySchedules(xmlNodePtr cur){
 	}
 	return 0;
 }
-```
+{% endhighlight %}
 
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<Proxys>
-  <ProxyObjects>
-    <Proxy name="filterProxy" so="../plugins/filterProxy.so">
-      <Resource name="filterResource" class="filterResource">
-        <Config name="THRESHOLD" value="0.0001"/>
-      </Resource>
-    </Proxy>
-    <Proxy name="strModelProxy" so="../plugins/strModelProxy.so">
-      <Resource name="strModelResource" class="strModelResource"/>
-    </Proxy>
-  </ProxyObjects>
-  <ProxySchedules name="taxi">
-    <Phase proxy="filterProxy"/>
-    <Phase proxy="strModelProxy"/>
-  </ProxySchedules>
-</Proxys>
-```
 
 ```
 
