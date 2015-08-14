@@ -148,6 +148,7 @@ int main(int argc,char** argv){
 {% endhighlight %}
 
 产生结果如下：   
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <Proxys>
@@ -167,6 +168,7 @@ int main(int argc,char** argv){
   </ProxySchedules>
 </Proxys>
 ```
+
 下面是一个解析XML文件的c代码：   
 {% highlight c++ %}
 #include <stdio.h>
@@ -292,6 +294,7 @@ int parseProxySchedules(xmlNodePtr cur){
 {% endhighlight %}
 
 解析结果如下：   
+
 ```
 
 ┌─type=[Proxy] name=[filterProxy] so=[../plugins/filterProxy.so]
