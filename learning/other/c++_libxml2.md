@@ -35,7 +35,7 @@ g++ -g -I../../thirdparty/libxml2/include/libxml2 \
 └             └─ parseXML.cc
 ```
 
-这里简单地用c++实现了XML文件创建和解析，所对应Makefile文件内容如下：   
+这里简单地用c++实现了XML文件创建和解析，以及根据XPATH来解析XML，所对应Makefile文件内容如下：   
 
 {% highlight make %}
 # Makefile
@@ -49,10 +49,10 @@ LIBS = -L../../thirdparty/libxml2/lib -lxml2
 all:
 	$(GCC) $(CPPFLAGS) produceXML.cc -o produceXML $(INCLUDE) $(LIBS)
 	$(GCC) $(CPPFLAGS) parseXML.cc -o parseXML $(INCLUDE) $(LIBS)
+	$(GCC) $(CPPFLAGS) qXPATH.cc -o qXPATH $(INCLUDE) $(LIBS)
 	./produceXML > test.xml
 clean:
-	rm -rf produceXML
-	rm -rf parseXML
+	rm -rf produceXML parseXML qXPATH
 	rm -rf test.xml
 {% endhighlight %}
 
@@ -74,6 +74,7 @@ xmlAddChild(father, son); // 创建一个子节点
 xmlNewProp(node, BAD_CAST "XXX", BAD_CAST "XXX_value"); // 添加节点属性
 xmlStrcmp(node->name , BAD_CAST "XXX"); // 判断节点是否为 XXX
 xmlGetProp(node, BAD_CAST "XXX"); // 获取节点的XXX属，返回类型为 unsigned char*
+xmlUnlinkNode(cur); // 删除节点
 xmlFreeDoc(doc); // 释放文档指针
 xmlMemoryDump(); // 释放所有内存资源
 {% endhighlight %}
@@ -222,6 +223,7 @@ int main(int argc,char** argv){
 			xmlFree(tmp);
 		}
 	}
+	xmlFreeDoc(doc);
 	puts("");
 	if(ret){
 		printf("there is something wrong\n");
@@ -318,3 +320,55 @@ int parseProxySchedules(xmlNodePtr cur){
 └───proxy=[strModelProxy]
 
 ```
+
+下面再给出一个根据XPATH解析的c代码：   
+
+{% highlight c++ %}
+// qXPATH.cc
+#include <stdio.h>
+#include <libxml/tree.h>
+#include <libxml/xpath.h>
+
+xmlXPathObjectPtr xmlXPATHParse(xmlDocPtr doc, const xmlChar* Xpath){
+	
+	xmlXPathContextPtr context = xmlXPathNewContext(doc);
+	if(context == NULL){
+		printf("context is NULL\n");
+		return NULL;
+	}
+
+	xmlXPathObjectPtr cur = xmlXPathEvalExpression(Xpath, context);
+	xmlFree(context);
+	if(cur == NULL){
+		printf("xmlXPathEvalExpression is NULL");
+		return NULL;
+	}
+	
+	if(xmlXPathNodeSetIsEmpty(cur->nodesetval)){
+		printf("node set has no val\n");
+		xmlFree(cur);
+		return NULL;
+	}
+	return cur;
+}
+int main(){
+	
+	char* file = (char*)"test.xml";
+	xmlDocPtr doc = xmlReadFile(file, "UTF-8", XML_PARSE_NOBLANKS);
+	if(doc == NULL){
+		printf("read file failed\n");
+	}
+	// 查找 Proxys/ProxyObjects/Proxy 这一级下有 name 的标签 
+	xmlNodeSetPtr my_set = xmlXPATHParse(doc, BAD_CAST "/Proxys/ProxyObjects/Proxy[@name]")->nodesetval;
+	for(int i = 0; i < my_set->nodeNr; i++){
+		xmlNodePtr cur = (my_set->nodeTab[i]);
+		printf("%s\n",xmlGetProp(cur, BAD_CAST "name"));
+	}
+
+	xmlFreeDoc(doc);
+	return 0;
+}
+{% endhighlight %}
+
+有没有发现 libxml2 的功能很强大。   
+libxml2 默认编码是 `UTF-8` , 所以在操作其他格式数据的时候需要注意！   
