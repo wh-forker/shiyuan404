@@ -31,12 +31,13 @@ tags: life
 │	   │
 │	   └─ redis，mysql，golang，unit-testing，code-style
 │
-├─ 实战 IRC 3天
+├─ 实战IRC 3天
 │	   │
 │	   └─ 聊天工具
 │
 └─  on the way ...
 ```
+
 ### 户外拓展
 和来自杭州上海快的团队的小伙伴们玩的很开心。   
 其实一开始，我是拒绝的。性格问题，多少有点放不开。   
@@ -57,11 +58,71 @@ tags: life
 	<figcaption>野狼队 && 娘子军</figcaption>
 </figure>
 
-
+哭过，累过，笑过，野狼队是最棒的   
 
 ###  技术培训
 
+从内容上看，一部分是比较基础的，一部分是偏后端架构的，个人感觉稍微有点抵触<d>新语言、技术</d>，这种心态很<r>危险</r>！   
+从老师上看，请来的老师都是产品技术部的架构大牛和项目顾问，阵容十分强大，但是感觉到自己底子比较差，不少东西还是跟不上，严重地讲，大致就是上面讲得眉飞色舞，我却在下面迷糊神游，有点自暴自弃，这种状态很危险唉。   
+到写这篇博客，已经过去十多天了，该忘的都忘了，不该忘的也差不多忘了，列些还有感觉的点：   
 
+* 解耦
+* 小步快跑，持续集成
+* 代码规范，写给人or机器看
 
+(当然还有一些技术上的收获，这里只罗列一些思想)   
 
+<figure>
+	<a href="../images/on_the_string/3.jpg">
+		<img src="../images/on_the_string/3.jpg">
+	</a>
+	<figcaption>我最年轻，我最2~</figcaption>
+</figure>
+
+### 项目实战IRC
+
+```
+Team : EasyGo   
+Members : 
+	XiaoJing          server
+	WeiDidi           parser
+	ZhangHaolong      redis
+	ZhuXimei          testing
+	LiuJian           Android
+	ShiYuan            Web
+```
+
+3天时间，实现一个能多人分组聊天的工具，限定条件是后端必须用Go语言。这明摆着是要拼后端呀，我们组三个架构，两个算法，一个安卓，于是后端我完全插不上手，默默搞web去了。   
+结果咧，队友十分给力，我们组拿了冠军~   
+
+<figure>
+	<a href="../images/on_the_string/4.jpg">
+		<img src="../images/on_the_string/4.jpg">
+	</a>
+	<figcaption>小桔人民很行</figcaption>
+</figure>
  
+ 
+我们组由于人员比较充足，做了三个客户端，一个cmd，一个安卓，一个web。让一个搞算法的搞web，啧啧，画面是该有多美   
+ 
+<figure>
+	<a href="../images/on_the_string/5.jpg">
+		<img src="../images/on_the_string/5.jpg">
+	</a>
+	<figcaption>酷炫吧~</figcaption>
+</figure>
+
+好歹也是看过凌晨五点滴滴打车的人   
+
+<figure class="three">
+	<a href="../images/on_the_string/6.jpg">
+		<img src="../images/on_the_string/6.jpg">
+	</a>
+	<a href="../images/on_the_string/7.jpg">
+		<img src="../images/on_the_string/7.jpg">
+	</a>
+	<a href="../images/on_the_string/8.jpg">
+		<img src="../images/on_the_string/8.jpg">
+	</a>
+</figure>
+
