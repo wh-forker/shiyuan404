@@ -4417,7 +4417,7 @@ button::-moz-focus-inner {
 
 .mfp-iframe-holder .mfp-content {
   width: 100%;
-  max-width: 900px;
+  max-width: 800px;
   line-height: 0;
 }
 

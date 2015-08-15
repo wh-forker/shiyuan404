@@ -114,7 +114,7 @@ Members :
 
 我们是最牛逼的   
 
-<figure class="three">
+<figure class="third">
 	<a href="../images/on_the_string/9.jpg">
 		<img src="../images/on_the_string/9.jpg">
 	</a>
@@ -130,7 +130,7 @@ Members :
 
 好歹也是看过凌晨五点滴滴打车的人   
 
-<figure class="three">
+<figure class="third">
 	<a href="../images/on_the_string/6.jpg">
 		<img src="../images/on_the_string/6.jpg">
 	</a>
