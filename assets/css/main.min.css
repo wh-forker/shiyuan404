@@ -4417,7 +4417,7 @@ button::-moz-focus-inner {
 
 .mfp-iframe-holder .mfp-content {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   line-height: 0;
 }
 
@@ -4966,7 +4966,7 @@ body {
 @media only screen and (min-width: 62.5em) {
   #post .entry-content,
   #page .entry-content {
-    max-width: 900px;
+    max-width: 800px;
     padding: 50px 80px;
     margin: 50px auto 30px auto;
   }

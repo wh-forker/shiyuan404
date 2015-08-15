@@ -76,7 +76,7 @@ tags: life
 	<a href="../images/on_the_string/3.jpg">
 		<img src="../images/on_the_string/3.jpg">
 	</a>
-	<figcaption>我最年轻，我最2~</figcaption>
+	<figcaption>我最年轻，我最2</figcaption>
 </figure>
 
 ### 项目实战IRC
